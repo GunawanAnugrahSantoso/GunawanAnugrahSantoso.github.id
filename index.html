@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRUESTEPS.ID | Vans Second Original</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Montserrat',sans-serif;background:#fff;color:#111}
+a{text-decoration:none}
+
+/* THEME */
+:root{
+  --red:#c40000;
+  --dark-red:#8f0000;
+  --dark:#111;
+  --white:#fff;
+
+  /* GANTI GAMBAR HEADER DI SINI */
+  --header-bg:url("images/backround.jpg");
+}
+
+/* HEADER */
+header{
+  background:
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    var(--header-bg);
+  background-size:cover;
+  background-position:center;
+  color:#fff;
+  padding:90px 20px;
+  text-align:center;
+}
+header h1{
+  font-family:'Anton',sans-serif;
+  font-size:3rem;
+  letter-spacing:4px;
+}
+nav{margin-top:20px}
+nav a{color:#fff;margin:0 12px;font-weight:bold}
+
+/* SECTION */
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:70px 20px;
+}
+.section h2{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:2.3rem;
+  border-left:6px solid var(--red);
+  padding-left:15px;
+  margin-bottom:20px;
+}
+
+/* PRODUCTS */
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+.card{
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 15px 30px rgba(0,0,0,.15);
+}
+.card img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+}
+.card-body{padding:20px}
+.card-body h3{
+  font-family:'Anton',sans-serif;
+}
+.card-body strong{color:var(--red)}
+
+/* BUTTON */
+.btn{
+  width:100%;
+  margin-top:10px;
+  padding:12px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(135deg,var(--red),var(--dark-red));
+  color:#fff;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* CART */
+#cart{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  width:60px;
+  height:60px;
+  background:linear-gradient(135deg,var(--red),var(--dark-red));
+  color:#fff;
+  font-size:26px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  cursor:pointer;
+}
+#cartBox{
+  display:none;
+  position:fixed;
+  bottom:100px;
+  right:25px;
+  width:320px;
+  background:#fff;
+  border-radius:18px;
+  padding:20px;
+  box-shadow:0 25px 45px rgba(0,0,0,.4);
+}
+
+/* FOOTER */
+footer{
+  background:#111;
+  color:#ccc;
+  text-align:center;
+  padding:25px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>TRUESTEPS.ID</h1>
+  <p>Vans Second Original • Streetwear Culture</p>
+  <nav>
+    <a href="#profil">Profil</a>
+    <a href="#produk">Produk</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+</header>
+
+<section id="profil" class="section">
+  <h2>Profil Toko</h2>
+  <p><strong>TRUESTEPS.ID</strong> menjual sepatu Vans second original.
+  Alamat: <strong>Jl. Gunung Kelir Raya No.30, Purbalingga Kulon</strong></p>
+</section>
+
+<section id="produk" class="section">
+  <h2>Produk Kami</h2>
+  <div class="products">
+
+    <div class="card">
+      <img src="images/Vans Ward Os Black White.jpg">
+      <div class="card-body">
+        <h3>Vans Old School</h3>
+        <p>Kondisi 98%</p>
+        <strong>Rp350.000</strong>
+        <button class="btn" onclick="addToCart('Vans Ward OS',350000)">Tambah</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/Vans Authentic 44 DX white anaheim factory.jpg">
+      <div class="card-body">
+        <h3>Vans Authentic</h3>
+        <p>Kondisi 98%</p>
+        <strong>Rp370.000</strong>
+        <button class="btn" onclick="addToCart('Vans Authentic 44 DX',370000)">Tambah</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/Vans 36 Style Decon Sf Green.jpg">
+      <div class="card-body">
+        <h3>Vans Decon 36 Style</h3>
+        <p>Kondisi 98%</p>
+        <strong>Rp370.000</strong>
+        <button class="btn" onclick="addToCart('Vans Decon 36',370000)">Tambah</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/Vans OS SHIT HAPPENS.jpg">
+      <div class="card-body">
+        <h3>Vans Old School</h3>
+        <p>Kondisi 98%</p>
+        <strong>Rp350.000</strong>
+        <button class="btn" onclick="addToCart('Vans OS Shit Happens',350000)">Tambah</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/Vans Sk8 Hi Port Royale.jpg">
+      <div class="card-body">
+        <h3>Vans Sk8 Hi</h3>
+        <p>Kondisi 98%</p>
+        <strong>Rp370.000</strong>
+        <button class="btn" onclick="addToCart('Vans Sk8 Hi',370000)">Tambah</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/Vans Sk8 Hi 138 Decon Sf Black Green.jpg">
+      <div class="card-body">
+        <h3>Vans Sk8 Hi 138 Decon</h3>
+        <p>Kondisi 98%</p>
+        <strong>Rp370.000</strong>
+        <button class="btn" onclick="addToCart('Vans Sk8 Hi 138 Decon Sf Black Green',370000)">Tambah</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/Vans Sk8 Hi 138 Decon Black White.jpg">
+      <div class="card-body">
+        <h3>Vans Sk8 Hi 138 Decon</h3>
+        <p>Kondisi 98%</p>
+        <strong>Rp370.000</strong>
+        <button class="btn" onclick="addToCart('Vans Sk8 Hi 138 Decon Black White',370000)">Tambah</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/Vans Sk8 Hi Navy.jpg">
+      <div class="card-body">
+        <h3>Vans Sk8 Hi</h3>
+        <p>Kondisi 98%</p>
+        <strong>Rp370.000</strong>
+        <button class="btn" onclick="addToCart('Vans Sk8 Hi Navy',370000)">Tambah</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="kontak" class="section">
+  <h2>Kontak</h2>
+  <p>WhatsApp: <strong>0857-0210-8841</strong></p>
+  <p>Instagram: <strong>@truesteps.id</strong></p>
+</section>
+
+<div id="cart" onclick="toggleCart()">🛒</div>
+<div id="cartBox">
+  <h3>Keranjang</h3>
+  <ul id="cartItems"></ul>
+  <p>Total: Rp<span id="total">0</span></p>
+  <button class="btn" onclick="checkout()">Checkout WhatsApp</button>
+</div>
+
+<footer>
+  <p>© 2025 TRUESTEPS.ID • Streetwear Never Dies</p>
+</footer>
+
+<script>
+let cart=[];
+function addToCart(n,p){cart.push({n,p});alert(n+" ditambahkan")}
+function toggleCart(){
+  let b=document.getElementById("cartBox");
+  b.style.display=b.style.display==="block"?"none":"block";
+  renderCart();
+}
+function renderCart(){
+  let i=document.getElementById("cartItems"),t=0;
+  i.innerHTML="";
+  cart.forEach(c=>{
+    t+=c.p;
+    let li=document.createElement("li");
+    li.textContent=c.n+" - Rp"+c.p;
+    i.appendChild(li);
+  });
+  document.getElementById("total").textContent=t;
+}
+function checkout(){
+  let m="Halo TRUESTEPS.ID, saya ingin beli:%0A";
+  cart.forEach(c=>m+="- "+c.n+"%0A");
+  window.open("https://wa.me/6285702108841?text="+m);
+}
+</script>
+
+</body>
+</html>
