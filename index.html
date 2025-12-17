@@ -5,28 +5,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TRUESTEPS.ID | Vans Second Original</title>
 
+<!-- GOOGLE FONTS -->
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME (SOSIAL MEDIA ICON) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Montserrat',sans-serif;background:#fff;color:#111}
 a{text-decoration:none}
 
-/* THEME */
 :root{
   --red:#c40000;
   --dark-red:#8f0000;
   --dark:#111;
   --white:#fff;
 
-  /* GANTI GAMBAR HEADER DI SINI */
+  /* GANTI BACKGROUND HEADER DI SINI */
   --header-bg:url("images/backround.jpg");
 }
 
 /* HEADER */
 header{
   background:
-    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
     var(--header-bg);
   background-size:cover;
   background-position:center;
@@ -41,6 +44,30 @@ header h1{
 }
 nav{margin-top:20px}
 nav a{color:#fff;margin:0 12px;font-weight:bold}
+
+/* SOCIAL MEDIA */
+.social-media{
+  margin-top:25px;
+  display:flex;
+  justify-content:center;
+  gap:18px;
+}
+.social-media a{
+  width:45px;
+  height:45px;
+  background:rgba(255,255,255,.15);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  font-size:20px;
+  transition:.3s;
+}
+.social-media a:hover{
+  background:var(--red);
+  transform:translateY(-5px) scale(1.1);
+}
 
 /* SECTION */
 .section{
@@ -74,9 +101,7 @@ nav a{color:#fff;margin:0 12px;font-weight:bold}
   object-fit:cover;
 }
 .card-body{padding:20px}
-.card-body h3{
-  font-family:'Anton',sans-serif;
-}
+.card-body h3{font-family:'Anton',sans-serif}
 .card-body strong{color:var(--red)}
 
 /* BUTTON */
@@ -140,11 +165,19 @@ footer{
     <a href="#produk">Produk</a>
     <a href="#kontak">Kontak</a>
   </nav>
+
+  <!-- SOSIAL MEDIA -->
+  <div class="social-media">
+    <a href="https://www.facebook.com/share/16Xcq3sGsh/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/truesteps.id?igsh=MW0xajBwcGNvdTU4NQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@truesteps.id2?_r=1&_t=ZS-92IIGQKEAtA" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://youtube.com/@truesteps.idsecond?si=CnZjqELFoaxt3zUP" target="_blank"><i class="fab fa-youtube"></i></a>
+  </div>
 </header>
 
 <section id="profil" class="section">
   <h2>Profil Toko</h2>
-  <p><strong>TRUESTEPS.ID</strong> menjual sepatu Vans second original.
+  <p><strong>TRUESTEPS.ID</strong> menjual sepatu Vans second original.<br>
   Alamat: <strong>Jl. Gunung Kelir Raya No.30, Purbalingga Kulon</strong></p>
 </section>
 
@@ -152,7 +185,7 @@ footer{
   <h2>Produk Kami</h2>
   <div class="products">
 
-    <div class="card">
+     <div class="card">
       <img src="images/Vans Ward Os Black White.jpg">
       <div class="card-body">
         <h3>Vans Old School</h3>
